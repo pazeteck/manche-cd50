@@ -116,6 +116,7 @@ class OneviewDataCollector
                 $tmp_array['cpu'] = $member['processorCount'];
                 $tmp_array['powerstate'] = $member['powerState'] === 'On' ? 1 : 0;
                 $tmp_array['model'] = $member['model'];
+                $tmp_array['uuid'] = $member['uuid'];
                 $hosts[] = $tmp_array;
             }
 
