@@ -3,7 +3,6 @@
 namespace App\DataCollector;
 
 use Exception;
-use http\Exception\RuntimeException;
 
 class LdapDataCollector
 {

@@ -2,7 +2,8 @@
 
 namespace App\Controller;
 
-use App\DataCollector\LdapDataCollector;
+use App\DataCollector\ManagerDataCollector;
+use App\Tools\Nslookup;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -11,9 +12,9 @@ class HomeController extends AbstractController
 {
     #[Route('/', name: 'app_home')]
     public function index(
-        LdapDataCollector $ldapDataCollector
+        ManagerDataCollector $mdc
     ): Response
     {
-        dd($ldapDataCollector->fetchData());
+        dd($mdc->get());
     }
 }
