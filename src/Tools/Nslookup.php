@@ -11,7 +11,7 @@ class Nslookup
             $ips = explode(',', preg_replace(['/\n/','/\t\s{2}/'], ['',','], $matches[2]));
             $dns = strtolower($matches[1]);
             $ip = $ips[0];
-            $additional_ip = array_slice($ips, 1) ?: null;
+            $additional_ip = implode(",", array_slice($ips, 1)) ?: null;
             return [
                 'dns' => $dns,
                 'ip' => $ip,
