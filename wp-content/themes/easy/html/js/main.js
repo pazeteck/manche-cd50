@@ -24,7 +24,7 @@ function loadSite() {
 	// Lightbox
 	$('.lightbox').magnificPopup({
 		type: 'image',
-			mainClass: 'mfp-with-zoom mfp-fade',
+		mainClass: 'mfp-with-zoom mfp-fade',
 		zoom: {
 			enabled: true,
 			duration: 300,
@@ -138,4 +138,4 @@ function loadSite() {
 // LoadSite
 $(window).load(function(){
     loadSite();
-});
+})
